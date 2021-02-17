@@ -11,18 +11,6 @@ const appearFromTop = keyframes`
   }
 `;
 
-const movingAnimation = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-`;
-
 export const Wrapper = styled.div`
   h1 {
     text-align: center;
@@ -39,6 +27,14 @@ export const CharacterInfo = styled.div`
 
   background: #383838;
   transform: skewY(3deg);
+
+  @media(max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #383838;
+  }
 `;
 
 export const CharacterArticle = styled.article`
@@ -57,6 +53,19 @@ export const CharacterArticle = styled.article`
 
   transform: skewY(-3deg);
   animation: ${appearFromTop} 1s;
+
+  @media(max-width: 1024px) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 10rem 2rem 10rem;
+
+    transform: skewY(-3deg);
+
+    h2 {
+      text-align: center;
+    }
+  }
 `;
 
 export const CharacterImageContainer = styled.div``;
@@ -67,6 +76,13 @@ export const CharacterImage = styled.img`
 
   border-radius: 0.5rem;
   transform: skewY(0deg);
+
+  @media (max-width: 1024px) {
+    width: 15rem;
+    height: 15rem;
+
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export const CharacterGeneralInfo = styled.div`
@@ -79,6 +95,20 @@ export const CharacterGeneralInfo = styled.div`
   }
 
   transform: skewY(3deg);
+
+  @media(max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    font-size: 0.9rem;
+
+    h2 {
+      margin-bottom: 0.9rem;
+      text-align: center;
+    }
+  }
 `;
 
 export const CharacterProps = styled.div`
@@ -108,22 +138,12 @@ export const CharacterProps = styled.div`
   }
 
   transform: skewY(-3deg);
-`;
 
-export const Heading = styled.header`
-  padding: 5rem;
-  text-align: center;
-`;
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-export const Logo = styled.img`
-  position: absolute;
-  top: -10%;
-  left: -7%;
-
-  width: 45rem;
-  height: 25rem;
-
-  animation: ${movingAnimation} 5s infinite;
-
-  z-index: 0;
+    width: 40vh;
+  }
 `;

@@ -7,11 +7,6 @@ import { getImageUrl } from '../../utils/getImageUrl';
 import { Character } from '../../types/api';
 
 type Props = {
-  title: string;
-  description: string;
-  image: {
-    url: string;
-  };
   characters: Character[];
 };
 
@@ -51,16 +46,9 @@ const statusWithIcons = (status: string) => {
   }
 };
 
-const Showcase = ({ title, characters, image, description }: Props) => {
+const Showcase = ({ characters }: Props) => {
   return (
     <S.Wrapper>
-      <S.Heading>
-        <h1>{title}</h1>
-        <h3>{description}</h3>
-
-        <S.Logo src={getImageUrl(image.url)} alt="Rick and Morty"/>
-      </S.Heading>
-
       <S.CharacterInfo>
         {characters.slice(0, 8).map((
           {

@@ -7,6 +7,7 @@ import GET_LANDING_PAGE from '../graphql/queries/getLandingPage';
 import { LandingPageProps } from '../types/api';
 
 import Showcase from '../components/Showcase';
+import Header from '../components/Header';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { landingPage } = await client.request(GET_LANDING_PAGE);
@@ -29,7 +30,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const Home = ({ title, characters, image, description }: LandingPageProps) => {
   return (
-    <Showcase title={title} characters={characters} image={image} description={description} />
+    <>
+      <Header title={title} description={description} image={image} />
+      <Showcase characters={characters} />
+    </>
   )
 }
 
