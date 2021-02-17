@@ -27,6 +27,10 @@ fragment characterInfo on LandingPage {
 query GET_LANDING_PAGE {
   landingPage {
     title
+    description
+    image {
+      url
+    }
     ...characterInfo
   }
 }

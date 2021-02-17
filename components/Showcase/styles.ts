@@ -11,6 +11,18 @@ const appearFromTop = keyframes`
   }
 `;
 
+const movingAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
 export const Wrapper = styled.div`
   h1 {
     text-align: center;
@@ -36,7 +48,7 @@ export const CharacterArticle = styled.article`
   border-radius: 0.5rem;
 
   margin: 1.5rem;
-  padding: 1rem;
+  padding: 0.8rem;
 
   background: #4a4a49;
   color: #eee;
@@ -50,10 +62,10 @@ export const CharacterArticle = styled.article`
 export const CharacterImageContainer = styled.div``;
 
 export const CharacterImage = styled.img`
-  width: 20rem;
-  height: 20rem;
+  width: 18rem;
+  height: 18rem;
 
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   transform: skewY(0deg);
 `;
 
@@ -82,8 +94,36 @@ export const CharacterProps = styled.div`
 
     ul {
       margin: 0.4rem 0 0 1.5rem;
+      list-style: none;
+
+      li::before {
+        content: "\\2022";
+        color: #FF725F;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
     }
   }
 
   transform: skewY(-3deg);
+`;
+
+export const Heading = styled.header`
+  padding: 5rem;
+  text-align: center;
+`;
+
+export const Logo = styled.img`
+  position: absolute;
+  top: -10%;
+  left: -7%;
+
+  width: 45rem;
+  height: 25rem;
+
+  animation: ${movingAnimation} 5s infinite;
+
+  z-index: 0;
 `;

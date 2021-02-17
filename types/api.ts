@@ -23,5 +23,9 @@ export type Character = {
 
 export type LandingPageProps = {
   title: string;
+  description: string;
+  image: {
+    url: string;
+  };
   characters: Character[];
 };
