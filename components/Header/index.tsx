@@ -1,7 +1,7 @@
+import React from 'react';
 import * as S from './styles';
 
 import { getImageUrl } from '../../utils/getImageUrl';
-import React from "react";
 
 type Props = {
   title: string;

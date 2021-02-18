@@ -13,13 +13,27 @@ const movingAnimation = keyframes`
 `;
 
 export const Heading = styled.header`
-  padding: 5rem;
+  padding: 15rem;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  @media(max-width: 1024px) {
+    padding: 5rem;
+
+    h1, h3 {
+      width: 90vw;
+    }
+  }
 `;
 
 export const Logo = styled.img`
   position: absolute;
-  top: -10%;
+  top: 25%;
   left: -7%;
 
   width: 45rem;

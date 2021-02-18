@@ -50,7 +50,7 @@ const Showcase = ({ characters }: Props) => {
   return (
     <S.Wrapper>
       <S.CharacterInfo>
-        {characters.slice(0, 8).map((
+        {characters.slice(0, 6).map((
           {
             id,
             name,
@@ -71,7 +71,7 @@ const Showcase = ({ characters }: Props) => {
 
                 <S.CharacterProps>
                   <p>{statusWithIcons(status)} - {status}</p>
-                  <span><strong>Race:</strong> {race.name}</span>
+                  <span><strong>Species:</strong> {race.name}</span>
                   <span><strong>Place of Origin:</strong> {origin ? origin.name : 'Unknown'} </span>
                   <span><strong>Last Seen:</strong> {location ? location.name : 'Not Found'} </span>
                   <span><strong>Occupations:</strong><ul>
