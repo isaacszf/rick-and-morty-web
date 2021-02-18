@@ -8,7 +8,7 @@ import { LandingPageProps } from '../types/api';
 
 import Showcase from '../components/Showcase';
 import Header from '../components/Header';
-import Footer from '../components/GithubPresentation';
+import GithubPresentation from '../components/GithubPresentation';
 
 export const getStaticProps: GetStaticProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE);
@@ -34,7 +34,7 @@ const Home = ({ title, characters, image, description, GithubPresentation }: Lan
     <>
       <Header title={title} description={description} image={image} />
       <Showcase characters={characters} />
-      <Footer {...GithubPresentation} />
+      <GithubPresentation {...GithubPresentation} />
     </>
   )
 }
