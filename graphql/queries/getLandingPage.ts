@@ -32,6 +32,12 @@ query GET_LANDING_PAGE {
       url
     }
     ...characterInfo
+     GithubPresentation {
+      title
+      image {
+        url
+      }
+    }
   }
 }
 `;

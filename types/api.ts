@@ -28,4 +28,10 @@ export type LandingPageProps = {
     url: string;
   };
   characters: Character[];
+  GithubPresentation: {
+    title: string;
+    image: {
+      url: string;
+    };
+  }
 };

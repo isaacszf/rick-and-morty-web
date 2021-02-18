@@ -32,6 +32,8 @@ export const Heading = styled.header`
 `;
 
 export const Logo = styled.img`
+  display: none;
+
   position: absolute;
   top: 25%;
   left: -7%;

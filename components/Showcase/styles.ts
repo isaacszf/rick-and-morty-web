@@ -71,8 +71,8 @@ export const CharacterArticle = styled.article`
 export const CharacterImageContainer = styled.div``;
 
 export const CharacterImage = styled.img`
-  width: 18rem;
-  height: 18rem;
+  width: 16rem;
+  height: 16rem;
 
   border-radius: 0.5rem;
   transform: skewY(0deg);
