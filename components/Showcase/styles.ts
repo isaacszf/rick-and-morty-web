@@ -21,6 +21,9 @@ export const Wrapper = styled.div`
 
 export const CharacterInfo = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   flex-wrap: wrap;
 
   padding: 1.5rem;
