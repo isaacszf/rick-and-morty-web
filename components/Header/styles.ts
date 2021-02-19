@@ -13,7 +13,7 @@ const movingAnimation = keyframes`
 `;
 
 export const Heading = styled.header`
-  padding: 15rem;
+  padding: 5rem;
   text-align: center;
 
   display: flex;
@@ -32,16 +32,10 @@ export const Heading = styled.header`
 `;
 
 export const Logo = styled.img`
-  display: none;
+  width: 20rem;
+  height: 20rem;
 
-  position: absolute;
-  top: 25%;
-  left: -7%;
-
-  width: 45rem;
-  height: 25rem;
-
-  animation: ${movingAnimation} 5s infinite;
+  margin-top: 2.4rem;
 
   z-index: 0;
 

@@ -6,9 +6,10 @@ import GET_LANDING_PAGE from '../graphql/queries/getLandingPage';
 
 import { LandingPageProps } from '../types/api';
 
-import Showcase from '../components/Showcase';
 import Header from '../components/Header';
-import GithubPresentation from '../components/GithubPresentation';
+import Showcase from '../components/Showcase';
+import GithubProjectPresentation from '../components/GithubPresentation';
+import Footer from '../components/Footer';
 
 export const getStaticProps: GetStaticProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE);
@@ -34,7 +35,8 @@ const Home = ({ title, characters, image, description, GithubPresentation }: Lan
     <>
       <Header title={title} description={description} image={image} />
       <Showcase characters={characters} />
-      <GithubPresentation {...GithubPresentation} />
+      <GithubProjectPresentation {...GithubPresentation} />
+      <Footer />
     </>
   )
 }

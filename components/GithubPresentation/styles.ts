@@ -37,8 +37,10 @@ export const Link = styled.a`
 `;
 
 export const GithubProjectImage = styled.img`
+
+
   @media(max-width: 1024px) {
-    width: 23rem;
+    width: 22rem;
     height: 20rem;
 
     margin: 1rem;
